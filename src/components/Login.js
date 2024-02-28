@@ -6,7 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { backgroundImg } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -14,7 +14,6 @@ const Login = () => {
   const emailValue = useRef(null);
   const passwordValue = useRef(null);
   const nameValue = useRef(null);
-  const navigate = useNavigate();
 
   const handleFormSubmit = () => {
     const formValidationResult = validateForm(
@@ -35,7 +34,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -52,7 +50,6 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           console.log(user);
-          navigate("/");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -64,11 +61,7 @@ const Login = () => {
   return (
     <div className="relative">
       <Header />
-      <img
-        className="absolute"
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/c0b69670-89a3-48ca-877f-45ba7a60c16f/6f5fcbd6-993f-4d76-b207-799c937026ae/US-en-20240212-popsignuptwoweeks-perspective_alpha_website_small.jpg"
-        alt="backgroundImg"
-      ></img>
+      <img className="absolute" src={backgroundImg} alt="backgroundImg"></img>
 
       <form
         onSubmit={(e) => e.preventDefault()}
