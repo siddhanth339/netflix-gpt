@@ -10,6 +10,12 @@ export const backgroundImg =
 export const NOWPLAYINGMOVIES_API =
   "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
 
+export const POPULARMOVIES_API =
+  "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+export const TOPRATEDMOVIES_API =
+  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+export const UPCOMINGMOVIES_API =
+  "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
 export const OPTIONS_FOR_APICALL = {
   method: "GET",
   headers: {
@@ -20,3 +26,5 @@ export const OPTIONS_FOR_APICALL = {
 };
 
 export const VIDEOS_API = "https://api.themoviedb.org/3/movie/";
+
+export const movieImage_CDN = "https://image.tmdb.org/t/p/w200/";

@@ -111,9 +111,9 @@ const Login = () => {
           onClick={() => setIsSignInForm(!isSignInForm)}
         >
           {isSignInForm ? (
-            <text>New to Netflix? Sign Up Now</text>
+            <span>New to Netflix? Sign Up Now</span>
           ) : (
-            <text>Already registered? SignIn</text>
+            <span>Already registered? SignIn</span>
           )}
         </p>
       </form>
