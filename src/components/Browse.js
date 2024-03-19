@@ -32,7 +32,7 @@ const Browse = () => {
           className="text-white font-bold bg-red-600 rounded-lg w-[150px] p-3 m-6"
           onClick={handleGPTButtonClick}
         >
-          GPT Search
+          {visible ? "Home" : "GPT Search"}
         </button>
         <img
           className="w-16 h-16 m-3 p-3 rounded-full"

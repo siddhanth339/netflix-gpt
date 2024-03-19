@@ -7,7 +7,6 @@ const GPTSearchBar = () => {
     "Act as a movie recommendation system and suggest movies for the query: " +
     userQuery;
   const handleSearchClick = async () => {
-    console.log("HandleSearchClicked");
     const chatCompletion = await openai.chat.completions.create({
       messages: [{ role: "user", content: GPTQuery }],
       model: "gpt-3.5-turbo",
