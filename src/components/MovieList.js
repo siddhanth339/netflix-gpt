@@ -6,30 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 const MovieList = ({ title, movies }) => {
   const sliderRef = useRef(null);
-  const CustomPrevArrow = (props) => (
-    <button
-      {...props}
-      className="absolute left-0 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 focus:outline-none"
-    >
-      <i className="fas fa-chevron-left"></i>
-    </button>
-  );
-
-  const CustomNextArrow = (props) => (
-    <button
-      {...props}
-      className="absolute right-0 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 focus:outline-none"
-    >
-      <i className="fas fa-chevron-right"></i>
-    </button>
-  );
   const settings = {
     infinite: true,
-    slidesToShow: 9, // Adjust the number of visible slides as needed
-    slidesToScroll: 3,
+    slidesToShow: 7, // Adjust the number of visible slides as needed
+    slidesToScroll: 2,
     arrows: true,
-    // prevArrow: <CustomPrevArrow />,
-    // nextArrow: <CustomNextArrow />,
     responsive: [
       {
         breakpoint: 1024,
